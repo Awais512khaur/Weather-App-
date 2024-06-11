@@ -19,18 +19,16 @@ export async function checkWeather(city) {
     }
 
     locationnotfound.style.display = "none"; 
-
     temprature.innerHTML = `${Math.round(weatherdata.main.temp - 273.15)}°C`;
     description.innerHTML = `${weatherdata.weather[0].description}`;
     humidity.innerHTML = `${weatherdata.main.humidity}%`;
     wind.innerHTML = `${weatherdata.wind.speed} Km/H`; 
-
     switch (weatherdata.weather[0].main.toLowerCase()) {
         case 'clouds':
-            weatherimage.src = "/images/cloud.png";
+            weatherimage.src = "images/cloud.png";
             break;
         case 'clear':
-            weatherimage.src = "./images/clear.png";
+            weatherimage.src = "images/clear.png";
             break;
         case 'mist':
             weatherimage.src = "images/mist.png";
@@ -42,7 +40,7 @@ export async function checkWeather(city) {
             weatherimage.src = "images/snow.png";
             break;
         default:
-            weatherimage.src = "images/default.png";
+            weatherimage.src = "images/default.png"; 
             break;
     }
 }
