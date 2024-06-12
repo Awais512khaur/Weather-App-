@@ -6,3 +6,4 @@ const inputbox = document.querySelector('.inputbox');
 searchbtn.addEventListener('click', () => {
     checkWeather(inputbox.value);
 });
+
