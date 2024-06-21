@@ -18,7 +18,8 @@ export async function checkWeather(city)
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`;
   const weatherdata = await fetch(url).then((response) => response.json());
   console.log("Weather Data:", weatherdata);
-  if (weatherdata.cod === `404`) {
+  if (weatherdata.cod === `404`) 
+  {
     locationnotfound.style.display = "flex";
     console.log("Error");
     return;
